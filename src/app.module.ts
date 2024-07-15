@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DataSource } from 'typeorm';
 import { BooksModule } from './books/books.module';
+import { Book } from './books/entities/book.entity';
 
 @Module({
   imports: [
@@ -14,7 +15,7 @@ import { BooksModule } from './books/books.module';
       username: 'root',
       password: 'rootpassword',
       database: 'library_db',
-      entities: [],
+      entities: [Book],
       synchronize: true,
     }),
     BooksModule,
@@ -23,5 +24,5 @@ import { BooksModule } from './books/books.module';
   providers: [AppService],
 })
 export class AppModule {
-  constructor(private dataSource: DataSource) {}
+  constructor(private dataSource: DataSource) { }
 }
