@@ -1,21 +1,19 @@
-
-
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class Book {
-    @PrimaryGeneratedColumn()
-    id: number;
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @Column()
-    title: string;
+  @Column()
+  title: string;
 
-    @Column()
-    author: string;
+  @Column()
+  author: string;
 
-    @Column()
-    publishYear: number;
+  @Column()
+  publishYear: number;
 
-    @Column()
-    isAvailable: boolean;
+  @Column()
+  isAvailable: boolean;
 }

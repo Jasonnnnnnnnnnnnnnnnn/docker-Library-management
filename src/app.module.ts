@@ -24,5 +24,5 @@ import { Book } from './books/entities/book.entity';
   providers: [AppService],
 })
 export class AppModule {
-  constructor(private dataSource: DataSource) { }
+  constructor(private dataSource: DataSource) {}
 }
